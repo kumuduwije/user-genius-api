@@ -18,21 +18,17 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    
-    "typeorm":"ts-node ./node_modules/typeorm/cli",
+    "typeorm": "ts-node ./node_modules/typeorm/cli",
     "typeorm:create-migration": "npm run typeorm -- migration:create ./migrations/$npm_config_name",
-    
-    "typeorm:run-migrations":"npm run typeorm migration:run -- -d ./typeOrm.config.ts",
-    "typeorm:revert-migrations":"npm run typeorm migration:revert -- -d ./typeOrm.config.ts"
-
-    
+    "typeorm:run-migrations": "npm run typeorm migration:run -- -d ./typeOrm.config.ts",
+    "typeorm:revert-migrations": "npm run typeorm migration:revert -- -d ./typeOrm.config.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.2.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/mapped-types": "*",
-    "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/platform-express": "^10.3.3",
     "@nestjs/typeorm": "^10.0.2",
     "dotenv": "^16.4.5",
     "mysql2": "^3.9.2",
