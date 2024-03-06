@@ -15,6 +15,9 @@ export class User {
     @Column()
     email:string;
 
+    @Column()
+    password:string
+
 
     constructor(user: Partial<User>) {
         Object.assign(this, user);
