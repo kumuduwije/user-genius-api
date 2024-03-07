@@ -1,6 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { AbstractEntity } from "./abstract.entity";
-import { Customer } from "./customer.entity";
+//import { Customer } from "./customer.entity";
+import { Customer } from "../../customers/entities/customer.entity";
 
 @Entity()
 export class User extends AbstractEntity<User> {

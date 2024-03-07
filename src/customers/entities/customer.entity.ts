@@ -1,6 +1,6 @@
+import { AbstractEntity } from "src/users/entities/abstract.entity";
+import { User } from "src/users/entities/user.entity";
 import { Column, Entity, ManyToOne } from "typeorm";
-import { AbstractEntity } from "./abstract.entity";
-import { User } from "./user.entity";
 
 @Entity()
 export class Customer extends AbstractEntity<Customer>{
