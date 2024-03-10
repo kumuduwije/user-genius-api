@@ -2,7 +2,9 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
+  
   const app = await NestFactory.create(AppModule);
+  
 
   // Set up CORS
   app.enableCors({
@@ -11,7 +13,8 @@ async function bootstrap() {
     allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   });
-
+  
+  app.setGlobalPrefix('api')
   await app.listen(3000);
 }
 bootstrap();
