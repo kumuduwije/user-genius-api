@@ -29,4 +29,10 @@ export class AuthService{
         return this.userRepository.save(newUser);
     }
 
+
+    async findUser(id: number){
+            const user = await this.userRepository.findOneBy({id});
+            return user;
+    }
+
 }

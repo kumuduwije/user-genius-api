@@ -6,12 +6,14 @@ import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
 import { CustomersModule } from './customers/customers.module';
 import { AuthModule } from './auth/auth.module';
+import { PassportModule } from '@nestjs/passport';
 
 
 @Module({
   imports: [
     ConfigModule.forRoot({isGlobal:true})
-    , DatabaseModule, UsersModule, CustomersModule, AuthModule,],
+    , DatabaseModule, UsersModule, CustomersModule, AuthModule,  PassportModule.register({ session: true }),],
+    
   controllers: [],
   providers: [],
 })
