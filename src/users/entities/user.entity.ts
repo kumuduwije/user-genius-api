@@ -10,16 +10,27 @@ export class User extends AbstractEntity<User> {
     // id: number;
 
     @Column()
-    firstname:string;
+     name:string;
 
-    @Column()
-    lastname:string;
+     @Column()
+     email:string;
 
-    @Column()
-    displayname:string;
+     @Column()
+     imageUrl:string;
 
-    @Column()
-    email:string;
+    // @Column()
+    // firstname:string;
+
+    // @Column()
+    // lastname:string;
+
+    // @Column()
+    // displayname:string;
+
+    // @Column()
+    // email:string;
+
+
 
     // @Column()
     // password:string
