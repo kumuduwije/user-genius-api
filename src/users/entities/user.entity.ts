@@ -10,16 +10,30 @@ export class User extends AbstractEntity<User> {
     // id: number;
 
     @Column()
-    firstname:string;
+     name:string;
 
-    @Column()
-    lastname:string;
+     @Column()
+     email:string;
 
-    @Column()
-    email:string;
+     @Column()
+     imageUrl:string;
 
-    @Column()
-    password:string
+    // @Column()
+    // firstname:string;
+
+    // @Column()
+    // lastname:string;
+
+    // @Column()
+    // displayname:string;
+
+    // @Column()
+    // email:string;
+
+
+
+    // @Column()
+    // password:string
 
     @OneToMany(() => Customer, (customer) => customer.user, {cascade:true})
     customer: Customer[]
